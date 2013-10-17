@@ -14,7 +14,7 @@ get '/sessions/new' do
 end
 
 post '/sessions' do
-  # sign-in
+  # sign-in (from index.erb)
   @email = params[:email]
   user = User.authenticate(@email, params[:password])
   if user
