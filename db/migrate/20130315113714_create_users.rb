@@ -1,9 +1,12 @@
-class CreateUsers < ActiveRecord::Migration
+class CreateProficiencies < ActiveRecord::Migration
   def change
-    create_table :users do |t|
-      t.string :name
-      t.string :email
-      t.string :password_hash
+
+    create_table :proficiencies do |t|
+
+      t.integer :user_id
+      t.integer :skill_id
+      t.integer :years_experience
+      t.boolean :formal_education
 
       t.timestamps
     end
