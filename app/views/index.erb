@@ -2,4 +2,33 @@
   <h1>User Skills and Levels</h1>
 
   <%# TODO: display the skills and proficiency levels for each user ... %>
+
+
+  <form id="login" action="/" method="POST">
+    <label for="login">Login:</label>
+    <input type="text" name="username">
+    <input type="password" name="password">
+  </form>
+
+  <a href="users/new">Sign Up!</a>
+
+  <table>
+    <tr>
+    <th>Name</th>
+    <th>Skill</th>
+    <th>Years of Experience</th>
+    <th>Formal Education</th>
+    </tr>
+    <% @users.each do |user| %>
+
+    <tr><td><a href=""><%= user.name %></td></a></tr>
+    <% @users.proficiencies.each do |proficiency| %>
+    <% @users.skills.each do |skill| %>
+    <tr><td><a href=""%>"><%= skill.yname%></td></a></tr>
+    <tr><td><a href=""%>"><%= proficiency.years_experience %></td></a></tr>
+  <% end %>
+    <% end %>
+   <% end %>
+
+  </table>
 </div>
