@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
 
   has_many :proficiencies
   has_many :skills, through: :proficiencies
-  belongs_to :skill
 
   include BCrypt
 
@@ -30,6 +29,3 @@ class User < ActiveRecord::Base
     return nil
   end
 end
-
-
-
